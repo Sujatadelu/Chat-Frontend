@@ -24,7 +24,7 @@ function SignUp() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/users/sign-up",
+        `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/users/sign-up`,
         {
           name,
           email,

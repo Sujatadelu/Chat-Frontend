@@ -28,7 +28,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/users/login",
+        `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/users/login`,
         {
           email,
           password,

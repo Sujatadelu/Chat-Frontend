@@ -20,7 +20,7 @@ function AllChats({ fetchAgain }) {
         },
       };
       const response = await axios.get(
-        `http://localhost:8000/api/v1/chat`,
+        `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/chat`,
         config
       );
       console.log(response.data.data);

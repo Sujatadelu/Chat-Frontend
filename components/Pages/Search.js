@@ -35,7 +35,7 @@ function Search() {
         },
       };
       const response = await axios.post(
-        `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/chat`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/api/v1/chat`,
         { userId: user?._id },
         config
       );
@@ -81,7 +81,7 @@ function Search() {
         },
       };
       const response = await axios.get(
-        `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/users?search=${search}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/api/v1/users?search=${search}`,
         config
       );
 

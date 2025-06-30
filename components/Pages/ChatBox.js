@@ -88,7 +88,7 @@ function ChatBox({ fetchAgain, setFetchAgain }) {
         },
       };
       const response = await axios.get(
-        `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/message/${selectedChat._id}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API}/api/v1/message/${selectedChat._id}`,
         config
       );
       setMessages(response.data.messages);
@@ -114,7 +114,7 @@ function ChatBox({ fetchAgain, setFetchAgain }) {
           },
         };
         const response = await axios.post(
-          `process.env.NEXT_PUBLIC_BACKEND_API/api/v1/message`,
+          `${process.env.NEXT_PUBLIC_BACKEND_API}/api/v1/message`,
           { chatId: selectedChat._id, content: newMessage },
           config
         );
